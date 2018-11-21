@@ -117,6 +117,11 @@ namespace AsynchronousGrab
             this.ReleaseVimba();
         }
 
+        public Camera ThisCamera
+        {
+            get { return m_Camera; }
+        }
+
         /// <summary>
         /// Gets or sets a value indicating whether an image is displayed or not
         /// </summary>

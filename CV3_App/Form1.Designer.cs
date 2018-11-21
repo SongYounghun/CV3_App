@@ -45,8 +45,8 @@
             this.m_LogList = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.button_test = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -92,7 +92,7 @@
             this.splitContainer2.Panel2.Controls.Add(this.m_DisplayPanel);
             this.splitContainer2.Panel2MinSize = 100;
             this.splitContainer2.Size = new System.Drawing.Size(1021, 535);
-            this.splitContainer2.SplitterDistance = 217;
+            this.splitContainer2.SplitterDistance = 216;
             this.splitContainer2.TabIndex = 0;
             // 
             // m_CameraListTable
@@ -186,7 +186,7 @@
             this.m_DisplayPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_DisplayPanel.Location = new System.Drawing.Point(0, 0);
             this.m_DisplayPanel.Name = "m_DisplayPanel";
-            this.m_DisplayPanel.Size = new System.Drawing.Size(800, 535);
+            this.m_DisplayPanel.Size = new System.Drawing.Size(801, 535);
             this.m_DisplayPanel.TabIndex = 3;
             // 
             // m_PictureBox
@@ -195,8 +195,8 @@
             this.m_PictureBox.Location = new System.Drawing.Point(0, 0);
             this.m_PictureBox.Margin = new System.Windows.Forms.Padding(0);
             this.m_PictureBox.Name = "m_PictureBox";
-            this.m_PictureBox.Size = new System.Drawing.Size(796, 531);
-            this.m_PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.m_PictureBox.Size = new System.Drawing.Size(797, 531);
+            this.m_PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.m_PictureBox.TabIndex = 2;
             this.m_PictureBox.TabStop = false;
             this.m_PictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.m_PictureBox_Paint);
@@ -269,6 +269,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Description";
             // 
+            // button_test
+            // 
+            this.button_test.Location = new System.Drawing.Point(946, 23);
+            this.button_test.Name = "button_test";
+            this.button_test.Size = new System.Drawing.Size(75, 23);
+            this.button_test.TabIndex = 6;
+            this.button_test.Text = "Test";
+            this.button_test.UseVisualStyleBackColor = true;
+            this.button_test.Click += new System.EventHandler(this.button_test_Click);
+            // 
             // label3
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -279,16 +289,6 @@
             this.label3.Text = "Programming example to demonstrate how to acquire images asynchronously (grab) wi" +
     "th VimbaNET.";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button_test
-            // 
-            this.button_test.Location = new System.Drawing.Point(946, 23);
-            this.button_test.Name = "button_test";
-            this.button_test.Size = new System.Drawing.Size(75, 23);
-            this.button_test.TabIndex = 6;
-            this.button_test.Text = "Test";
-            this.button_test.UseVisualStyleBackColor = true;
-            this.button_test.Click += new System.EventHandler(this.button_test_Click);
             // 
             // Form1
             // 

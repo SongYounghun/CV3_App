@@ -65,6 +65,7 @@
     <Compile Include="Camera\Vimba_SDK\FrameEventArgs.cs" />
     <Compile Include="Camera\Vimba_SDK\RingBitmap.cs" />
     <Compile Include="Camera\Vimba_SDK\VimbaHelper.cs" />
+    <Compile Include="Camera\Vimba_SDK\Vimba_Cam.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

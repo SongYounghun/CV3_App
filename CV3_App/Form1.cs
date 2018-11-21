@@ -80,6 +80,7 @@ namespace CV3_App
                 Mat img = BitmapConverter.ToMat(new Bitmap(args.Image));
                 img = img.CvtColor(ColorConversionCodes.RGB2GRAY);
                 Mat colorMapImg = new Mat();
+                //Cv2.ApplyColorMap(img, colorMapImg, ColormapTypes.Jet);
                 Cv2.ApplyColorMap(img, colorMapImg, ColormapTypes.Jet);
                 //Cv2.ImShow("Jet", colorMapImg);
 
@@ -379,11 +380,23 @@ namespace CV3_App
 
         private void button_test_Click(object sender, EventArgs e)
         {
-            Mat img = BitmapConverter.ToMat(new Bitmap(m_PictureBox.Image));
-            img = img.CvtColor(ColorConversionCodes.RGB2GRAY);
-            Mat colorMapImg = new Mat();
-            Cv2.ApplyColorMap(img, colorMapImg, ColormapTypes.Jet);
-            Cv2.ImShow("Jet", colorMapImg);            
+            //Mat img = BitmapConverter.ToMat(new Bitmap(m_PictureBox.Image));
+            //img = img.CvtColor(ColorConversionCodes.RGB2GRAY);
+            //Mat colorMapImg = new Mat();
+            //Cv2.ApplyColorMap(img, colorMapImg, ColormapTypes.Jet);
+            //Cv2.ImShow("Jet", colorMapImg);
+
+            if (m_VimbaHelper != null && m_VimbaHelper.ThisCamera != null)
+            {
+                AVT.VmbAPINET.Camera cam = m_VimbaHelper.ThisCamera;
+                int height = Convert.ToInt32(cam.Features["Height"].IntValue);
+
+                cam.Features["Width"].IntValue = 1388;
+
+                m_VimbaHelper.CloseCamera();
+                CameraInfo selectedItem = m_CameraList.SelectedItem as CameraInfo;
+                m_VimbaHelper.OpenCamera(selectedItem.ID);
+            }
         }
     }
 }
